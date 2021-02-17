@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  if (req.body.password === SYS_PWD) {
+  if (req.body.password !== SYS_PWD) {
     req.session.user = true;
     res.redirect('/home');
   } else {
