@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const { SYS_PWD } = process.env.SYS_PWD;
+const { SYS_PWD } = process.env;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
